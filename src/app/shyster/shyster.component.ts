@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-shyster',
   templateUrl: './shyster.component.html',
   styleUrls: ['./shyster.component.scss']
 })
-export class ShysterComponent extends MatCardModule {
+export class ShysterComponent {
 
   name = "Cpt Johnny Walker";
   profilePicture = "https://material.angular.io/assets/img/examples/shiba1.jpg";
@@ -15,7 +14,6 @@ export class ShysterComponent extends MatCardModule {
   role = "CEO";
 
   constructor() {
-    super();
   }
 
 }

@@ -1,9 +1,10 @@
 <mat-card>
   <mat-card-header>
-    <img mat-card-avatar class=profilePicture src={{profilePicture}}>
+    <img mat-card-avatar class="profilePicture" src={{profilePicture}}>
     <mat-card-title>{{name}}</mat-card-title>
-    <mat-card-title> Role: {{role}}</mat-card-title>
-    <mat-card-title> Status: {{status}}</mat-card-title>
-    <mat-card-title> Activity: {{currentGame}}</mat-card-title>
+    <mat-card-subtitle> Status: {{status}}</mat-card-subtitle>
   </mat-card-header>
+  <mat-card-content>
+    <p> Activity: {{currentGame}}</p>
+  </mat-card-content>
 </mat-card>
