@@ -1,16 +1,22 @@
-.navigationToolbar{
+mat-toolbar {
+    position: fixed;
+    z-index: 100;
+}
+
+.navigation-toolbar{
     display: flex;
     justify-content: space-between;
 }
-.example-container {
+
+.sidenav-container {
     position: absolute;
-    top: 0;
+    top: 50px;
     bottom: 0;
     left: 0;
     right: 0;
     background: #eee;
 }
 
-.example-sidenav {
+.sidenav-box {
     padding: 20px;
 }

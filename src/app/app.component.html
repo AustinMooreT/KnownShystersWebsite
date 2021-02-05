@@ -1,19 +1,17 @@
-<mat-sidenav-container class="example-container">
+<mat-toolbar>
+    <mat-toolbar-row class="navigation-toolbar">
+        <div></div>
+        <h1>Known Shysters</h1>
+        <button mat-raised-button (click)="sidenav.toggle()">
+            <mat-icon class="menuButton">menu</mat-icon>
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container class="sidenav-container">
     <mat-sidenav-content>
-        <mat-toolbar>
-            <mat-toolbar-row class="navigationToolbar">
-            <div></div>
-            <h1>Known Shysters</h1>
-            <button mat-raised-button (click)="drawer.toggle()">
-                <mat-icon class="menuButton">menu</mat-icon>
-            </button>
-            </mat-toolbar-row>
-        </mat-toolbar>
         <app-main-page></app-main-page>
     </mat-sidenav-content>
-    <mat-sidenav>
-        <mat-drawer class="example-sidenav" #drawer mode="side">
-            <p>Auto-resizing sidenav</p>
-        </mat-drawer>
+    <mat-sidenav class="sidenav-box" #sidenav mode="side" position="end">
+        <p>Auto-resizing sidenav</p>
     </mat-sidenav>
 </mat-sidenav-container>
