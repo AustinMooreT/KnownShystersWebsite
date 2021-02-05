@@ -2,8 +2,9 @@
     <mat-toolbar-row class="navigation-toolbar">
         <div></div>
         <h1>Known Shysters</h1>
-        <button mat-raised-button (click)="sidenav.toggle()">
-            <mat-icon class="menuButton">menu</mat-icon>
+        <button mat-raised-button (click)="sidenav.toggle(); toggleMenu();">
+            <mat-icon class="menuButton" *ngIf="menuOpen">menu_open</mat-icon>
+            <mat-icon class="menuButton" *ngIf="!menuOpen">menu</mat-icon>
         </button>
     </mat-toolbar-row>
 </mat-toolbar>
