@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatSidenavModule } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-root',
