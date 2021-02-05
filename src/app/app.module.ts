@@ -14,12 +14,16 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MainPageComponent } from './main-page/main-page.component';
+import { MainNavigationComponent } from './main-navigation/main-navigation.component';
+import { MatDividerModule } from '@angular/material/divider'
+import { MatRippleModule } from '@angular/material/core'
 
 @NgModule({
   declarations: [
     AppComponent,
     ShysterComponent,
-    MainPageComponent
+    MainPageComponent,
+    MainNavigationComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,9 @@ import { MainPageComponent } from './main-page/main-page.component';
     MatIconModule,
     LayoutModule,
     MatButtonModule,
-    MatListModule
+    MatListModule,
+    MatDividerModule,
+    MatRippleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
