@@ -1,17 +1,26 @@
 .mainPage{
-    background-color: #616161;
-  }
+  background-color: #616161;
+}
 
-.shyster-flex{
+.main-flex{
+  display: flex;
+  justify-content: center;
+}
+
+.shyster-feed-flex{
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.shyster-card-flex{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 3;
 }
 
 .shyster-card {
-  padding-top: 10px;
-  padding-left: 20%;
-  padding-right: 5%;
-}
-
-app-shyster{
+  padding-top: 1em;
+  width: 25%;
 }
