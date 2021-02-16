@@ -2,7 +2,16 @@
     background-color: #616161;
   }
 
+.shyster-flex{
+  display: flex;
+  flex-direction: column;
+}
+
+.shyster-card {
+  padding-top: 10px;
+  padding-left: 20%;
+  padding-right: 5%;
+}
+
 app-shyster{
-  width: 100%;
-  height: 90%;
 }
