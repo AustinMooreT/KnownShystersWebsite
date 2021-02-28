@@ -31,6 +31,10 @@ export class MainNavigationComponent implements OnInit {
   goToVtubersPage(): void {
     const navigationDetails: string[] = ['/vtubers-page'];
     this.router.navigate(navigationDetails);
+    let audio = new Audio();
+    audio.src = "../../../assets/eekum-bokum.mp3";
+    audio.load();
+    audio.play();
   }
 
 }
