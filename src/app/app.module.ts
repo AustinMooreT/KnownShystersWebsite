@@ -16,14 +16,21 @@ import { MatListModule } from '@angular/material/list';
 import { MainPageComponent } from './main-page/main-page.component';
 import { MainNavigationComponent } from './main-navigation/main-navigation.component';
 import { MatDividerModule } from '@angular/material/divider'
-import { MatRippleModule } from '@angular/material/core'
+import { MatRippleModule } from '@angular/material/core';
+import { YouTubePlayerModule } from "@angular/youtube-player";
+import { VideosPageComponent } from './videos-page/videos-page.component';
+import { GamingPageComponent } from './gaming-page/gaming-page.component';
+import { VtubersPageComponent } from './vtubers-page/vtubers-page.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     ShysterComponent,
     MainPageComponent,
-    MainNavigationComponent
+    MainNavigationComponent,
+    VideosPageComponent,
+    GamingPageComponent,
+    VtubersPageComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +46,8 @@ import { MatRippleModule } from '@angular/material/core'
     MatButtonModule,
     MatListModule,
     MatDividerModule,
-    MatRippleModule
+    MatRippleModule,
+    YouTubePlayerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

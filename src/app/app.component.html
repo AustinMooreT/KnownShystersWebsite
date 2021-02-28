@@ -1,5 +1,8 @@
 <div class="toolbar-flex">
-
+  <head>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Crimson+Pro">
+  </head>
   <mat-toolbar>
 
     <mat-toolbar-row class="navigation-toolbar">
@@ -16,7 +19,7 @@
   <mat-sidenav-container class="sidenav-container">
 
     <mat-sidenav-content>
-      <app-main-page></app-main-page>
+      <router-outlet></router-outlet> <!--Location for page display-->
     </mat-sidenav-content>
 
     <mat-sidenav class="sidenav-box" #sidenav mode="side" position="end">

@@ -1,15 +1,20 @@
 <mat-list>
   <div class="nav-button" matRipple>
     <mat-divider></mat-divider>
-    <mat-list-item><mat-icon>home</mat-icon>Home</mat-list-item>
+    <mat-list-item (click)="goToMainPage()"><mat-icon>home</mat-icon></mat-list-item>
     <mat-divider></mat-divider>
   </div>
   <div class="nav-button" matRipple>
-    <mat-list-item><mat-icon>movie</mat-icon>Videos</mat-list-item>
+    <mat-list-item (click)="goToVideosPage()"><mat-icon>movie</mat-icon></mat-list-item>
     <mat-divider></mat-divider>
   </div>
   <div class="nav-button" matRipple>
-    <mat-list-item><mat-icon>videogame_asset</mat-icon>Game a day</mat-list-item>
+    <mat-list-item (click)="goToGamingPage()"><mat-icon>videogame_asset</mat-icon></mat-list-item>
     <mat-divider></mat-divider>
   </div>
+  <div class="nav-button" matRipple>
+    <mat-list-item (click)="goToVtubersPage()"><img class="hololive" src="assets/hololive.png"></mat-list-item>
+    <mat-divider></mat-divider>
+  </div>
+  <!--TODO CHAGE ICON SIZE-->
 </mat-list>
