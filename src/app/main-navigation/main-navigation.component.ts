@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main-navigation',
@@ -7,9 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainNavigationComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  goToMainPage(): void {
+    const navigationDetails: string[] = ['/main-page'];
+    this.router.navigate(navigationDetails);
+  }
+
+  goToVideosPage(): void {
+    const navigationDetails: string[] = ['/videos-page'];
+    this.router.navigate(navigationDetails);
+  }
+
+  goToGamingPage(): void {
+    const navigationDetails: string[] = ['/gaming-page'];
+    this.router.navigate(navigationDetails);
+  }
+
+  goToVtubersPage(): void {
+    const navigationDetails: string[] = ['/vtubers-page'];
+    this.router.navigate(navigationDetails);
   }
 
 }
