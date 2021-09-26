@@ -3,7 +3,13 @@
   user-select: none;
 }
 
-.hololive {
-  width: 30px;
-  height: 30px;
+.vtubers-button {
+  background: url("../../assets/hololive.png") no-repeat; 
+  background-size: 30px 30px;
+  background-position: center;
+}
+.vtubers-button:hover {
+  background: url("../../assets/fubuki.gif") no-repeat; 
+  background-size: contain;
+  background-position: center;
 }

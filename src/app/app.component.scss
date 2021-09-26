@@ -1,3 +1,12 @@
+.sidenav-content {
+  background-color: #72727b;
+  opacity: 0.8;
+  background: linear-gradient(135deg, #49156A55 25%, transparent 25%) -27px 0/ 54px 54px,
+    linear-gradient(225deg, #49156A 25%, transparent 25%) -27px 0/ 54px 54px,
+    linear-gradient(315deg, #49156A55 25%, transparent 25%) 0px 0/ 54px 54px,
+    linear-gradient(45deg, #49156A 25%, #72727b 25%) 0px 0/ 54px 54px;
+}
+
 .toolbar-flex {
   display: flex;
   flex-direction: column;
@@ -13,8 +22,8 @@
 }
 
 .navigation-toolbar{
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 h1 {
