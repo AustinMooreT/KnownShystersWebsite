@@ -12,6 +12,20 @@ function loadClient() {
   .then(function() { console.log("GAPI client loaded for API"); },
     function(err : Error) { console.error("Error loading GAPI client for API", err); });
 }
+function execute() {
+  return gapi.client.youtube.channels.list({"part": ["contentDetails"], "id": "UCS5njOSqHIb0y_tVBDfaU3Q"})
+    .then(function(response : any) {
+      return gapi.client.youtube.playlistItems.list({"part": ["contentDetails"],
+                  "maxResults": 30,
+                  "playlistId": response.result.items[0].contentDetails.relatedPlaylists["uploads"]
+                })
+                  .then(function(response : any) {
+                    return response.result.items.map(function(x: any){return x.contentDetails.videoId});
+                  },
+                  function(err : Error) { console.error("Failed to get upload playlist elements", err); });
+              },
+              function(err : Error) { console.error("Failed to get upload playlist id", err); });
+  }
 @Component({
   selector: 'app-videos-page',
   templateUrl: './videos-page.component.html',
