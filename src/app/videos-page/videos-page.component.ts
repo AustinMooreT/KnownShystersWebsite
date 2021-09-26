@@ -32,10 +32,14 @@ function execute() {
   styleUrls: ['./videos-page.component.scss']
 })
 export class VideosPageComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  videoIds : Array<String>  
+  constructor() {
+    this.videoIds = []
   }
-
+  ngOnInit(): void {
+    gapi.load("client:auth2", () => {
+      gapi.auth2.init({client_id: environment.GAPI_CLIENT_ID});
+      this.videoIds = authenticate().then(loadClient).then(execute)
+    });
+  }
 }
