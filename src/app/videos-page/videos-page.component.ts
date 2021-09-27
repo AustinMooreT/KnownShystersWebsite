@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgZone, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 declare var gapi: any;
@@ -20,7 +21,8 @@ function execute() {
                   "playlistId": response.result.items[0].contentDetails.relatedPlaylists["uploads"]
                 })
                   .then(function(response : any) {
-                    return response.result.items.map(function(x: any){return x.contentDetails.videoId});
+                    return response.result.items.map(function(x: any){
+                      return x.contentDetails.videoId.toString()});
                   },
                   function(err : Error) { console.error("Failed to get upload playlist elements", err); });
               },
@@ -32,14 +34,16 @@ function execute() {
   styleUrls: ['./videos-page.component.scss']
 })
 export class VideosPageComponent implements OnInit {
-  videoIds : Array<String>  
-  constructor() {
-    this.videoIds = []
-  }
-  ngOnInit(): void {
+  videoIds : Array<String>
+  constructor(private ngZone : NgZone) {
+    this.videoIds = []  
     gapi.load("client:auth2", () => {
       gapi.auth2.init({client_id: environment.GAPI_CLIENT_ID});
-      this.videoIds = authenticate().then(loadClient).then(execute)
+      authenticate().then(loadClient).then(execute).then((ret : Array<String>) => {
+        this.ngZone.run(() => {this.videoIds = ret;});
+      })
     });
+  }
+  ngOnInit(): void { 
   }
 }
