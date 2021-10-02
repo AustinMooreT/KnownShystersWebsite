@@ -6,7 +6,7 @@ import { GamingPageComponent } from './gaming-page/gaming-page.component';
 import { VtubersPageComponent } from './vtubers-page/vtubers-page.component';
 
 const routes: Routes = [
-  { path: 'main-page', component: MainPageComponent },//TODO: should main page be plain url?
+  { path: '', component: MainPageComponent },
   { path: 'videos-page', component: VideosPageComponent },
   { path: 'gaming-page', component: GamingPageComponent },
   { path: 'vtubers-page', component: VtubersPageComponent }

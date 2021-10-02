@@ -14,7 +14,7 @@ export class MainNavigationComponent implements OnInit {
   }
 
   goToMainPage(): void {
-    const navigationDetails: string[] = ['/main-page'];
+    const navigationDetails: string[] = ['/'];
     this.router.navigate(navigationDetails);
   }
 
