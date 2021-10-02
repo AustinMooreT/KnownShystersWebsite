@@ -28,6 +28,11 @@ export class MainNavigationComponent implements OnInit {
     this.router.navigate(navigationDetails);
   }
 
+  goToRadioPage(): void {
+    const navigationDetails: string[] = ['/radio-page'];
+    this.router.navigate(navigationDetails);
+  }
+
   goToVtubersPage(): void {
     const navigationDetails: string[] = ['/vtubers-page'];
     this.router.navigate(navigationDetails);

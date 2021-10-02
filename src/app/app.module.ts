@@ -20,7 +20,8 @@ import { MatRippleModule } from '@angular/material/core';
 import { YouTubePlayerModule } from "@angular/youtube-player";
 import { VideosPageComponent } from './videos-page/videos-page.component';
 import { GamingPageComponent } from './gaming-page/gaming-page.component';
-import { VtubersPageComponent } from './vtubers-page/vtubers-page.component'
+import { VtubersPageComponent } from './vtubers-page/vtubers-page.component';
+import { RadioPageComponent } from './radio-page/radio-page.component'
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { VtubersPageComponent } from './vtubers-page/vtubers-page.component'
     MainNavigationComponent,
     VideosPageComponent,
     GamingPageComponent,
-    VtubersPageComponent
+    VtubersPageComponent,
+    RadioPageComponent
   ],
   imports: [
     BrowserModule,
