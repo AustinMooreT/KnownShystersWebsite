@@ -4,7 +4,7 @@ import cors from "cors";
 import path from "path";
 
 // Path to our built Angular application
-const APP_LOCATION = path.resolve(__dirname + "/../app/dist/KnownShysters/");
+const APP_LOCATION = path.resolve(__dirname + "/../app/dist/KnownShysters");
 
 // Create our Express application instance
 const app = express();
@@ -31,5 +31,5 @@ app.listen(4201, "127.0.0.1", () => {
 
 // Respond to all other requests with our Angular front-end
 app.get('*', (req: Request, res: Response) => {
-    res.sendFile(APP_LOCATION+"index.html");
+    res.sendFile(APP_LOCATION+"/index.html");
 })
