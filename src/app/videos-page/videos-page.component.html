@@ -1,10 +1,10 @@
 <div class="main-flex">
-    <mat-card class="video-card">
-        <mat-card-title >Halo video</mat-card-title>
-        <mat-card-subtitle>In this video shysters play Halo</mat-card-subtitle>
+    <mat-card *ngFor="let videoId of videoIds;" class="video-card">
+        <mat-card-title></mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
         <mat-card-content class="video-card-content">
             <youtube-player 
-            videoId="PyQnZeMEze0" 
+            videoId={{videoId}}
             suggestedQuality="highres" 
             [height]="250" 
             [width]="500" 
@@ -12,48 +12,6 @@
             [endSeconds]="">
             </youtube-player>
         </mat-card-content>
-    </mat-card>
-    <mat-card class="video-card">
-        <mat-card-title >Halo video</mat-card-title>
-        <mat-card-subtitle>In this video shysters play Halo</mat-card-subtitle>
-        <mat-card-content class="video-card-content">
-            <youtube-player 
-            videoId="oHeBf_K9xNk" 
-            suggestedQuality="highres" 
-            [height]="250" 
-            [width]="500" 
-            [startSeconds]=""
-            [endSeconds]="">
-            </youtube-player>
-        </mat-card-content>
-    </mat-card>
-    <mat-card class="video-card">
-        <mat-card-title >Halo video</mat-card-title>
-        <mat-card-subtitle>In this video shysters play Halo</mat-card-subtitle>
-        <mat-card-content class="video-card-content">
-            <youtube-player 
-            videoId="Y5aJeLEQIyA" 
-            suggestedQuality="highres" 
-            [height]="250" 
-            [width]="500" 
-            [startSeconds]=""
-            [endSeconds]="">
-            </youtube-player>
-        </mat-card-content>
-    </mat-card>
-    <mat-card class="video-card">
-        <mat-card-title >Halo video</mat-card-title>
-        <mat-card-subtitle>In this video shysters play Halo</mat-card-subtitle>
-        <mat-card-content class="video-card-content">
-            <youtube-player 
-            videoId="TQvYZRjDx6A" 
-            suggestedQuality="highres" 
-            [height]="250" 
-            [width]="500" 
-            [startSeconds]=""
-            [endSeconds]="">
-            </youtube-player>
-        </mat-card-content>
-    </mat-card>
+    </mat-card>    
 </div>
 
